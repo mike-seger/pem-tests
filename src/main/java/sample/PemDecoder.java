@@ -6,16 +6,15 @@ import no.difi.certvalidator.ValidatorBuilder;
 import no.difi.certvalidator.api.CertificateValidationException;
 import no.difi.certvalidator.rule.CRLRule;
 import no.difi.certvalidator.rule.ExpirationRule;
-import no.difi.certvalidator.rule.OCSPRule;
 import no.difi.certvalidator.rule.SigningRule;
 import org.cryptacular.util.CertUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.security.cert.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 
 @Slf4j
 public class PemDecoder {
